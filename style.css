@@ -1,0 +1,36 @@
+html, body {
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#container {
+	position: relative;
+	height: 75vh;
+	width: 70vw;
+	background: #fff;
+}
+#nav {
+	position: absolute;
+	bottom: 0;
+	height: 15%;
+	width: 100%;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 0 5% 0 5%;
+	box-sizing: border-box;
+	background: #efefef;
+}
+#nav span {
+	margin-right: 2%;
+	cursor: pointer;
+}
+#nav span:last-child {
+	margin-right: 0;
+}
