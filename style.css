@@ -14,7 +14,7 @@ html, body {
 	width: 70vw;
 	background: #fff;
 }
-#nav {
+#nav-bottom {
 	position: absolute;
 	bottom: 0;
 	height: 15%;
@@ -27,10 +27,56 @@ html, body {
 	box-sizing: border-box;
 	background: #efefef;
 }
-#nav span {
-	margin-right: 2%;
+#nav-bottom span {
+	margin-right: 5%;
 	cursor: pointer;
 }
-#nav span:last-child {
+#nav-bottom span:last-child {
 	margin-right: 0;
+}
+#nav-top {
+	position: absolute;
+	top: 0;
+	height: 15%;
+	width: 100%;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 5% 0 5%;
+	box-sizing: border-box;
+	background: #efefef;
+}
+.top-menu {
+	display: flex;
+}
+.top-menu span {
+	padding-right: 1vw;
+	cursor: pointer;
+}
+.top-menu span:last-child {
+	padding-right: 0;
+}
+.top-bar {
+	width: 100%;
+	height: 3px;
+	background: #000;
+	margin: 0 3% 0 3%;
+}
+.social-icons {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+.social-icons div {
+	height: 40%;
+	width: 40%;
+	padding-right: 1vw;
+}
+.social-icons-img {
+	cursor: pointer;
+	max-height: 100%;
+}
+.social-icons div:last-child {
+	padding-right: 0%;
 }
