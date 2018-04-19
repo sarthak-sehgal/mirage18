@@ -218,4 +218,47 @@ html, body {
 	transition: opacity 0.5s ease-in-out;
 	display: none;
 	opacity: 0;
+	overflow: auto;
+}
+#register-form {
+	width: 32%;
+	text-align: left;
+}
+#register-for-head {
+	margin-top: 5%;
+}
+#register-form input {
+	font-family: BebasNeue;
+	font-size: 1.1em;
+	margin-bottom: 5%;
+}
+#register-form input[type=text], #register-form input[type=email] {
+	width: 100%;
+	padding: 5px;
+	border: none;
+	border-bottom: 2px solid #c7c7c7;
+}
+#register-form label {
+	font-size: 1.2em;
+}
+#register-submit {
+	margin-bottom: 5%;
+}
+#register-submit {
+	cursor: pointer;
+	padding: 10px;
+	width: 40%;
+	background: #000;
+	color: #fff;
+	font-family: BebasNeue;
+	border: none;
+	font-size: 1.2em;
+}
+#contact-content {
+	display: none;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
 }

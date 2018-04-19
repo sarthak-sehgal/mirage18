@@ -9,15 +9,22 @@ for(var i=0; i<document.getElementsByClassName("top-menu-items").length; i++)
 var active_content = "home-content";
 var next_content;
 var transition_time = 500;
+var isRegisterOpen = 0;
 function openEvent() {
 	fadeOut(active_content);
 	document.getElementById("register-bottom").style.height = "10%";
 	document.getElementById("register-content").style.opacity = 0;
 
 	next_content = this.id+"-content";
-	if(next_content == "home-content" || active_content == "contact-content")
+	if(next_content == "home-content" || next_content == "contact-content")
 	{
-		fadeOutRegister();
+		if(!isRegisterOpen)
+			fadeOutRegister();
+		else
+		{
+			isRegisterOpen=!isRegisterOpen;
+			setTimeout(function(){fadeOutRegister();}, 500);
+		}
 		setTimeout(function(){fadeIn("nav-bottom");}, transition_time);
 	}
 	else
@@ -56,6 +63,7 @@ function fadeOutRegister() {
 		transition_time);
 }	
 function register(id) {
+	isRegisterOpen = !isRegisterOpen;
 	document.getElementById("register-bottom").style.height = "100%";
 	document.getElementById(id+"-content").style.opacity = 0;
 	setTimeout(
