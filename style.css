@@ -1,3 +1,7 @@
+@font-face {
+	font-family: BebasNeue;
+	src: url(./fonts/BebasNeue-Regular.ttf);
+}
 html, body {
 	height: 100vh;
 	width: 100vw;
@@ -7,6 +11,11 @@ html, body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background: url('./media/bg.png');
+	background-size: cover;
+	background-position: 50% 50%;
+	font-family: BebasNeue;
+	text-transform: uppercase;
 }
 #container {
 	position: relative;
@@ -16,8 +25,9 @@ html, body {
 }
 #nav-bottom {
 	position: absolute;
+	background: #fff;
 	bottom: 0;
-	height: 15%;
+	height: 10%;
 	width: 100%;
 	text-transform: uppercase;
 	display: flex;
@@ -25,18 +35,26 @@ html, body {
 	flex-wrap: wrap;
 	padding: 0 5% 0 5%;
 	box-sizing: border-box;
-	background: #efefef;
 }
 #nav-bottom span {
+	font-size: 1.2em;
 	margin-right: 5%;
 	cursor: pointer;
 }
 #nav-bottom span:last-child {
 	margin-right: 0;
 }
-#nav-top {
+#content {
 	position: absolute;
 	top: 0;
+	height: 90%;
+	width: 100%;
+	background: url('./media/container_bg.png');
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+}
+#nav-top {
 	height: 15%;
 	width: 100%;
 	text-transform: uppercase;
@@ -45,10 +63,11 @@ html, body {
 	align-items: center;
 	padding: 0 5% 0 5%;
 	box-sizing: border-box;
-	background: #efefef;
 }
 .top-menu {
 	display: flex;
+	align-items: center;
+	font-size: 1.4em;
 }
 .top-menu span {
 	padding-right: 1vw;
@@ -79,4 +98,58 @@ html, body {
 }
 .social-icons div:last-child {
 	padding-right: 0%;
+}
+#home-content {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}
+#rocktaves-content {
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+	display: none;
+	opacity: 0;
+}
+.oasis-head {
+	justify-content: center;
+	width: 100%;
+}
+.oasis-heading {
+	color: #fff;
+	font-size: 7em;
+	text-shadow: #000 4px 4px;
+}
+.oasis-slogan {
+	margin-top: -3%;
+	color: #fff;
+	font-size: 5em;
+	text-shadow: #000 4px 4px;
+	padding-left: 30%;
+	display: block;
+}
+.event-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: auto;
+}
+.event-name {
+	color: #fff;
+	font-size: 5.5em;
+	text-shadow: #000 4px 4px;
+}
+.event-body {
+	width: 40%;
+	margin-left: 20%;
 }
