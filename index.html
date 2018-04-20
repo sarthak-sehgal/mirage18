@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>OASIS '18</title>
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -29,11 +29,8 @@
 				</div>
 			</div>
 			<div id="home-content">
-				<div class="oasis-logo">
-					
-				</div>
 					<div class="head-container">
-						<img src="./media/oasis_logo.png" alt="Oasis logo"/>
+						<img src="./media/oasis_logo.png" class="oasis-logo" alt="Oasis logo"/>
 						<span class="oasis-heading">Oasis '18</span>
 					</div>
 					<span class="oasis-slogan">the far out fest</span>
@@ -44,8 +41,9 @@
 					<!-- <img src="./media/rocktaves.png" alt="Rocktaves" class="event-logo" /> -->
 				<!-- </div> -->
 				<div class="event-body">
-					For over two decades, Rocktaves has been one of the most prestigious semi-professional band competitions in India. The flagship event of Oasis, BITS-Pilani, one of the oldest cultural festivals in the country. The rock competition has acted as a springboard for India’s premiere rock groups of the stature of Parikrama, Indian Ocean, Superfuzz, PRESTORIKA, Them Clones and Euphoria who have taken part in the competition at different points in its history. In a bid to enlarge the talent pool, auditions are going to be held across the country with rounds in Bengaluru, Kolkata, Kochi, Shillong, Mumbai, Chennai and Delhi, making the event accessible to the largest possible set of competitors.
-					<br>The winners of these rounds not only get an all-expenses paid trip to Pilani, but also a chance to compete and win cash prizes to the tune of over one lakh rupees.
+					For over two decades, Rocktaves has been one of the most prestigious semi-professional band competitions in India. The flagship event of Oasis, BITS-Pilani, one of the oldest cultural festivals in the country. The rock competition has acted as a springboard for India’s premiere rock groups of the stature of Parikrama, Indian Ocean, Superfuzz, PRESTORIKA, Them Clones and Euphoria who have taken part in the competition at different points in its history.<br>
+					In a bid to enlarge the talent pool, auditions are going to be held in Bengaluru, Kolkata, Kochi, Guwahati, Mumbai, Chennai, Delhi and Kathmandu making the event accessible to the largest possible set of competitors.<br>
+					The winners of these rounds not only get an all-expenses paid trip to Pilani, but also a chance to compete and win cash prizes to the tune of over one lakh rupees and an album label among many other prizes.
 				</div>
 			</div>
 			<div id="contact-content" class="event-container">
@@ -56,17 +54,30 @@
 			</div>
 			<div id="register-content">
 				<h1 id="register-for-head"></h1>
-				<form id="register-form">
-					<input type="text" name="" placeholder="Name" /><br>
-					<input type="text" name="" placeholder="City" /><br>
-					<input type="text" name="" placeholder="Phone" /><br>
-					<label>Gender:</label><br>
-					<input type="radio" name="gender" value="male" /> Male<br>
-				  	<input type="radio" name="gender" value="female" /> Female<br>
-				  	<input type="radio" name="gender" value="other" /> Other<br>
+				<div id="register-form">
+					<input type="text" name="" placeholder="Name of band" /><br>
+					<input type="text" name="" placeholder="Genre" /><br>
+					<input type="text" name="" placeholder="Contact number" /><br>
 					<input type="email" name="" placeholder="E-mail id"><br>
+					<input type="text" name="" placeholder="No. of band members"><br>
+					<label>Elimination round location:</label><br>
+					<select>
+						<option value="bangalore">Bangalore</option>
+						<option value="chennai">Chennai</option>
+						<option value="delhi">Delhi</option>
+						<option value="guwahati">Guwahati</option>
+						<option value="kathmandu">Kathmandu</option>
+						<option value="kochi">Kochi</option>
+						<option value="kolkata">Kolkata</option>
+						<option value="mumbai">Mumbai</option>
+					</select><br><br>
+						<label>Entries:*</label><br>
+					<input type="text" name="" placeholder="Entry 1"><br>
+					<input type="text" name="" placeholder="Entry 2" /><br>
+					<input type="text" name="" placeholder="More entries" class="more-entries" />
+					<p>*Please provide YouTube/ Soundcloud/ Bandcamp/ Google Drive/ Dropbox links to atleast two ORIGINAL entries and links to live performances (if any). In case of audio/ video recordings, kindly mail the same to <code>arbits@bits-oasis.org</code> before 11:59 pm, 11<sup>th</sup> June 2018.</p>
 					<center><button id="register-submit">Submit</button></center>
-				</form>
+				</div>
 			</div>
 		</div>
 		<div id="nav-bottom">

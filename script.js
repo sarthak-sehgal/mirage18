@@ -1,3 +1,8 @@
+var active_content = "home-content";
+var next_content;
+var transition_time = 500;
+var isRegisterOpen = 0;
+
 for(var i=0; i<document.getElementsByClassName("event-link").length; i++)
 {
 	document.getElementsByClassName("event-link")[i].addEventListener("click", openEvent);
@@ -6,10 +11,7 @@ for(var i=0; i<document.getElementsByClassName("top-menu-items").length; i++)
 {
 	document.getElementsByClassName("top-menu-items")[i].addEventListener("click", openEvent);
 }
-var active_content = "home-content";
-var next_content;
-var transition_time = 500;
-var isRegisterOpen = 0;
+
 function openEvent() {
 	fadeOut(active_content);
 	document.getElementById("register-bottom").style.height = "10%";
