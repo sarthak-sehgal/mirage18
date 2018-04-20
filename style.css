@@ -11,11 +11,11 @@ html, body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-family: BebasNeue;
+	text-transform: uppercase;
 	background: url('./media/bg.png');
 	background-size: cover;
 	background-position: 50% 50%;
-	font-family: BebasNeue;
-	text-transform: uppercase;
 }
 #container {
 	position: relative;
