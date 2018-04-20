@@ -118,15 +118,10 @@ document.getElementById("myForm").onsubmit = function registerForm(e)
 				enteries: entries
 			}),
 			dataType: "json",
-			complete:function(xhr,textstatus){
-				document.getElementById("register-overlay").style.display = "flex";
-				document.getElementById("register-message").style.display = "flex";
-				document.getElementById("register-message-span").innerHTML = xhr.responseJSON.message;
-			},
 			error:function(xhr,textstatus,err){
 				document.getElementById("register-overlay").style.display = "flex";
 				document.getElementById("register-message").style.display = "flex";
-				document.getElementById("register-message-span").innerHTML = xhr.responseJSON.message;
+				document.getElementById("register-message-span").innerHTML = "ERROR! Please try again.";
 			}
 		}).done(function(response){
 			document.getElementById("register-overlay").style.display = "flex";
