@@ -100,7 +100,7 @@ document.getElementById("myForm").onsubmit = function registerForm(e)
 	entries = document.getElementById("register-entries").value;
 	if(name!="" && genre!="" && contact!="" && email!="" && members!="" && elemLocation!="" && entry1!="" && entry2!="")
 	{
-		URL = "http://192.168.1.104:8080/preregistration/";
+		URL = "https://www.bits-oasis.org/2018/preregistration/";
 		$.ajax({
 			type:'POST',
 			contentType: 'application/json',
