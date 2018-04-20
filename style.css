@@ -24,6 +24,8 @@ html, body {
 	background: #fff;
 }
 #register-bottom {
+	-webkit-transform:translate3d(0,0,0);
+	z-index: 1;
 	position: absolute;
 	background: #fff;
 	bottom: 0;
@@ -208,6 +210,7 @@ html, body {
 	transition: opacity 0.5s ease-in-out;	
 }
 #register-content {
+	-webkit-transform:translate3d(0,0,0);
 	z-index: 999;
 	width: 100%;
 	height: 100%;
