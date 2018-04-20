@@ -64,7 +64,7 @@ html, body {
 	transition: opacity 0.5s ease-in-out;
 }
 #nav-bottom span {
-	font-size: 1.2em;
+	font-size: 1.4em;
 	margin-right: 5%;
 	cursor: pointer;
 }
@@ -95,10 +95,10 @@ html, body {
 .top-menu {
 	display: flex;
 	align-items: center;
-	font-size: 1.4em;
+	font-size: 1.6em;
 }
 .top-menu span {
-	padding-right: 1vw;
+	padding-right: 0.5em;
 	cursor: pointer;
 }
 .top-menu span:last-child {
@@ -140,6 +140,7 @@ html, body {
 	transition: opacity 0.5s ease-in-out;
 }
 #rocktaves-content {
+	justify-content: space-between;
 	-webkit-transition: opacity 0.5s ease-in-out;
 	-moz-transition: opacity 0.5s ease-in-out;
 	-o-transition: opacity 0.5s ease-in-out;
@@ -178,6 +179,7 @@ html, body {
 	flex-direction: column;
 	align-items: center;
 	overflow: auto;
+	padding-bottom: 1em;
 }
 .event-name {
 	color: #fff;
@@ -186,9 +188,9 @@ html, body {
 }
 .event-body {
 	width: 80%;
-	/*margin-left: 20%;*/
-	font-size: 1.2em;
+	font-size: 1.4em;
 	text-align: center;
+	letter-spacing: 0.7px;
 }
 .event-name, .event-body {
 	z-index: 10;
@@ -265,6 +267,7 @@ html, body {
 	font-size: 1.2em;
 }
 #contact-content {
+	justify-content: center;
 	display: none;
 	opacity: 0;
 	-webkit-transition: opacity 0.5s ease-in-out;
@@ -295,7 +298,7 @@ html, body {
 		font-size: 1em;
 	}
 	#nav-bottom span {
-		font-size: 1em;
+		font-size: 1.2em;
 	}
 	.oasis-heading {
 		font-size: 5em;
@@ -311,6 +314,9 @@ html, body {
 	}
 	#register-form {
 		width: 70%;
+	}
+	.event-body {
+		font-size: 1.2em;
 	}
 }
 @media all and (max-width: 450px) {
