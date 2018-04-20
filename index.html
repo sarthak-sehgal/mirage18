@@ -61,28 +61,30 @@
 			<div id="register-content">
 				<h1 id="register-for-head"></h1>
 				<div id="register-form">
-					<input type="text" name="" placeholder="Name of band" /><br>
-					<input type="text" name="" placeholder="Genre" /><br>
-					<input type="text" name="" placeholder="Contact number" /><br>
-					<input type="email" name="" placeholder="E-mail id"><br>
-					<input type="text" name="" placeholder="No. of band members"><br>
-					<label>Elimination round location:</label><br>
-					<select>
-						<option value="bangalore">Bangalore</option>
-						<option value="chennai">Chennai</option>
-						<option value="delhi">Delhi</option>
-						<option value="guwahati">Guwahati</option>
-						<option value="kathmandu">Kathmandu</option>
-						<option value="kochi">Kochi</option>
-						<option value="kolkata">Kolkata</option>
-						<option value="mumbai">Mumbai</option>
-					</select><br><br>
-						<label>Entries:*</label><br>
-					<input type="text" name="" placeholder="Entry 1"><br>
-					<input type="text" name="" placeholder="Entry 2" /><br>
-					<input type="text" name="" placeholder="More entries" class="more-entries" />
-					<p style="letter-spacing: 0.5px;">*Please provide YouTube/ Soundcloud/ Bandcamp/ Google Drive/ Dropbox links to atleast two ORIGINAL entries and links to live performances (if any). In case of audio/ video recordings, kindly mail the same to <i>arbits@bits-oasis.org</i> &nbsp;before 11:59 pm, 11<sup>th</sup> June 2018.</p>
-					<center><button id="register-submit">Submit</button></center>
+					<form id="myForm">
+						<input type="text" name="" placeholder="Name of band" id="register-name" /><br>
+						<input type="text" name="" placeholder="Genre" id="register-genre" /><br>
+						<input type="text" name="" placeholder="Contact number" id="register-contact" /><br>
+						<input type="email" name="" placeholder="E-mail id" id="register-email"><br>
+						<input type="text" name="" placeholder="No. of band members" id="register-members"><br>
+						<label>Elimination round location:</label><br>
+						<select id="register-location">
+							<option value="bangalore">Bangalore</option>
+							<option value="chennai">Chennai</option>
+							<option value="delhi">Delhi</option>
+							<option value="guwahati">Guwahati</option>
+							<option value="kathmandu">Kathmandu</option>
+							<option value="kochi">Kochi</option>
+							<option value="kolkata">Kolkata</option>
+							<option value="mumbai">Mumbai</option>
+						</select><br><br>
+							<label>Entries:*</label><br>
+						<input type="text" name="" placeholder="Entry 1" id="register-entry1"><br>
+						<input type="text" name="" placeholder="Entry 2" / id="register-entry2"><br>
+						<input type="text" name="" placeholder="More entries" class="more-entries" id="register-entries"/>
+						<p style="letter-spacing: 0.5px;">*Please provide YouTube/ Soundcloud/ Bandcamp/ Google Drive/ Dropbox links to atleast two ORIGINAL entries and links to live performances (if any). In case of audio/ video recordings, kindly mail the same to <i>arbits@bits-oasis.org</i> &nbsp;before 11:59 pm, 11<sup>th</sup> June 2018.</p>
+						<center><button type="submit" id="register-submit">Submit</button></center>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -91,6 +93,12 @@
 		</div>
 		<div id="register-bottom"></div>
 	</div>
+	<div id="register-overlay"></div>
+	<div id="register-message">
+			<div id="register-close"><img src="./media/close.png"></div>
+			<span id="register-message-span"></span>
+	</div>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

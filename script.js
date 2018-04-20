@@ -78,3 +78,63 @@ function register(id) {
 					document.getElementById("register-content").style.display = "flex";document.getElementById("register-content").style.opacity = 1;}, 
 		transition_time);
 }
+
+// Register
+document.getElementById("register-close").addEventListener("click", closeRegister);
+function closeRegister(e) {
+	document.getElementById("register-overlay").style.display = "none";
+	document.getElementById("register-message").style.display = "none";
+	e.preventDefault();
+}
+
+document.getElementById("myForm").onsubmit = function registerForm(e)
+{
+	name = document.getElementById("register-name").value;
+	genre = document.getElementById("register-genre").value;
+	contact = document.getElementById("register-contact").value;
+	email = document.getElementById("register-email").value;
+	members = document.getElementById("register-members").value;
+	elemLocation = document.getElementById("register-location").value;
+	entry1 = document.getElementById("register-entry1").value;
+	entry2 = document.getElementById("register-entry2").value;
+	entries = document.getElementById("register-entries").value;
+	if(name!="" && genre!="" && contact!="" && email!="" && members!="" && elemLocation!="" && entry1!="" && entry2!="")
+	{
+		URL = "abc";
+		$.ajax({
+			type:'POST',
+			url: URL,
+			data:{
+				name: name,
+				genre: genre,
+				email: email,
+				members: members,
+				location: elemLocation,
+				entry1: entry1,
+				entry2: entry2,
+				entries: entries
+			},
+			complete:function(xhr,textstatus){
+				document.getElementById("register-overlay").style.display = "flex";
+				document.getElementById("register-message").style.display = "flex";
+				document.getElementById("register-message-span").innerHTML = xhr.responseJSON.message;
+			},
+			error:function(xhr,textstatus,err){
+				document.getElementById("register-overlay").style.display = "flex";
+				document.getElementById("register-message").style.display = "flex";
+				document.getElementById("register-message-span").innerHTML = xhr.responseJSON.message;
+			}
+		}).done(function(response){
+			document.getElementById("register-overlay").style.display = "flex";
+			document.getElementById("register-message").style.display = "flex";
+			document.getElementById("register-message-span").innerHTML = xhr.responseJSON.message;
+		});
+	}
+	else
+	{
+		document.getElementById("register-overlay").style.display = "flex";
+		document.getElementById("register-message-span").innerHTML = "Please fill all the required fields.";
+		document.getElementById("register-message").style.display = "flex";		
+	}
+	e.preventDefault();
+}
