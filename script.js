@@ -1,3 +1,8 @@
+var active_content = "home-content";
+var next_content;
+var transition_time = 500;
+var isRegisterOpen = 0;
+
 for(var i=0; i<document.getElementsByClassName("event-link").length; i++)
 {
 	document.getElementsByClassName("event-link")[i].addEventListener("click", openEvent);
@@ -6,10 +11,7 @@ for(var i=0; i<document.getElementsByClassName("top-menu-items").length; i++)
 {
 	document.getElementsByClassName("top-menu-items")[i].addEventListener("click", openEvent);
 }
-var active_content = "home-content";
-var next_content;
-var transition_time = 500;
-var isRegisterOpen = 0;
+
 function openEvent() {
 	fadeOut(active_content);
 	document.getElementById("register-bottom").style.height = "10%";
@@ -75,4 +77,68 @@ function register(id) {
 		function(){document.getElementById(id+"-register").style.display = "none"; 
 					document.getElementById("register-content").style.display = "flex";document.getElementById("register-content").style.opacity = 1;}, 
 		transition_time);
+}
+
+// Register
+document.getElementById("register-close").addEventListener("click", closeRegister);
+function closeRegister(e) {
+	document.getElementById("register-overlay").style.display = "none";
+	document.getElementById("register-message").style.display = "none";
+	e.preventDefault();
+}
+
+document.getElementById("myForm").onsubmit = function registerForm(e)
+{
+	name = document.getElementById("register-name").value;
+	genre = document.getElementById("register-genre").value;
+	contact = document.getElementById("register-contact").value;
+	email = document.getElementById("register-email").value;
+	members = document.getElementById("register-members").value;
+	elemLocation = document.getElementById("register-location").value;
+	entry1 = document.getElementById("register-entry1").value;
+	entry2 = document.getElementById("register-entry2").value;
+	entries = document.getElementById("register-entries").value;
+	if(name!="" && genre!="" && contact!="" && email!="" && members!="" && elemLocation!="" && entry1!="" && entry2!="")
+	{
+		URL = "https://www.bits-oasis.org/2018/preregistration/";
+		$.ajax({
+			type:'POST',
+			contentType: 'application/json',
+			// headers: { 'x-my-custom-header': 'some value' },
+			url: URL,
+			data:JSON.stringify({
+				name: name,
+				genre: genre,
+				phone: contact,
+				email_address: email,
+				number_of_participants: members,
+				elimination_preference: elemLocation,
+				entry1: entry1,
+				entry2: entry2,
+				enteries: entries
+			}),
+			dataType: "json",
+			complete:function(xhr,textstatus){
+				document.getElementById("register-overlay").style.display = "flex";
+				document.getElementById("register-message").style.display = "flex";
+				document.getElementById("register-message-span").innerHTML = xhr.responseJSON.message;
+			},
+			error:function(xhr,textstatus,err){
+				document.getElementById("register-overlay").style.display = "flex";
+				document.getElementById("register-message").style.display = "flex";
+				document.getElementById("register-message-span").innerHTML = xhr.responseJSON.message;
+			}
+		}).done(function(response){
+			document.getElementById("register-overlay").style.display = "flex";
+			document.getElementById("register-message").style.display = "flex";
+			document.getElementById("register-message-span").innerHTML = response.message;
+		});
+	}
+	else
+	{
+		document.getElementById("register-overlay").style.display = "flex";
+		document.getElementById("register-message-span").innerHTML = "Please fill all the required fields.";
+		document.getElementById("register-message").style.display = "flex";		
+	}
+	e.preventDefault();
 }

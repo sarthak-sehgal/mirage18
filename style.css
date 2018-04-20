@@ -11,11 +11,46 @@ html, body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: url('./media/bg.png');
-	background-size: cover;
-	background-position: 50% 50%;
 	font-family: BebasNeue;
 	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	background: url('./media/bg.jpg');
+	background-size: cover;
+	background-position: 50% 50%;
+}
+#register-overlay {
+	z-index: 999;
+	-webkit-transform: translate(0,0,0);
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	background: rgba(0,0,0,0.7);
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+#register-message {
+	z-index: 9999;
+	-webkit-transform: translate(0,0,0);
+	position: absolute;
+	height: 50vh;
+	width: 50vw;
+	background: #fff;
+	font-size: 2em;
+	border-radius: 2px;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+#register-close {
+	z-index: 9999;
+	-webkit-transform: translate(0,0,0);
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #000;
+	cursor: pointer;
 }
 #container {
 	position: relative;
@@ -24,6 +59,8 @@ html, body {
 	background: #fff;
 }
 #register-bottom {
+	-webkit-transform:translate3d(0,0,0);
+	z-index: 1;
 	position: absolute;
 	background: #fff;
 	bottom: 0;
@@ -43,6 +80,11 @@ html, body {
 #register-bottom span {
 	font-size: 1.2em;
 	cursor: pointer;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 #nav-bottom {
 	position: absolute;
@@ -62,7 +104,7 @@ html, body {
 	transition: opacity 0.5s ease-in-out;
 }
 #nav-bottom span {
-	font-size: 1.2em;
+	font-size: 1.4em;
 	margin-right: 5%;
 	cursor: pointer;
 }
@@ -74,7 +116,7 @@ html, body {
 	top: 0;
 	height: 90%;
 	width: 100%;
-	background: url('./media/container_bg.png');
+	background: url('./media/container_bg.jpg');
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
@@ -93,10 +135,10 @@ html, body {
 .top-menu {
 	display: flex;
 	align-items: center;
-	font-size: 1.4em;
+	font-size: 1.6em;
 }
 .top-menu span {
-	padding-right: 1vw;
+	padding-right: 0.5em;
 	cursor: pointer;
 }
 .top-menu span:last-child {
@@ -138,6 +180,7 @@ html, body {
 	transition: opacity 0.5s ease-in-out;
 }
 #rocktaves-content {
+	justify-content: space-between;
 	-webkit-transition: opacity 0.5s ease-in-out;
 	-moz-transition: opacity 0.5s ease-in-out;
 	-o-transition: opacity 0.5s ease-in-out;
@@ -154,17 +197,22 @@ html, body {
 	width: 100%;
 }
 .oasis-heading {
+	text-align: center;
 	color: #fff;
 	font-size: 7em;
 	text-shadow: #000 4px 4px;
 }
 .oasis-slogan {
+	text-align: center;
 	margin-top: -3%;
-	color: #fff;
-	font-size: 5em;
-	text-shadow: #000 4px 4px;
-	padding-left: 30%;
-	display: block;
+    color: #fff;
+    font-size: 4em;
+    text-shadow: #000 3px 3px;
+    padding-left: 30%;
+    display: block;
+}
+.oasis-logo {
+	max-height: 9em;
 }
 .event-container {
 	width: 100%;
@@ -173,6 +221,7 @@ html, body {
 	flex-direction: column;
 	align-items: center;
 	overflow: auto;
+	padding-bottom: 1em;
 }
 .event-name {
 	color: #fff;
@@ -181,9 +230,9 @@ html, body {
 }
 .event-body {
 	width: 80%;
-	/*margin-left: 20%;*/
-	font-size: 1.2em;
+	font-size: 1.4em;
 	text-align: center;
+	letter-spacing: 0.7px;
 }
 .event-name, .event-body {
 	z-index: 10;
@@ -202,9 +251,11 @@ html, body {
 	-webkit-transition: opacity 0.5s ease-in-out;
 	-moz-transition: opacity 0.5s ease-in-out;
 	-o-transition: opacity 0.5s ease-in-out;
-	transition: opacity 0.5s ease-in-out;	
+	transition: opacity 0.5s ease-in-out;
+	text-align: center;	
 }
 #register-content {
+	-webkit-transform:translate3d(0,0,0);
 	z-index: 999;
 	width: 100%;
 	height: 100%;
@@ -219,9 +270,10 @@ html, body {
 	display: none;
 	opacity: 0;
 	overflow: auto;
+    justify-content: space-between;
 }
 #register-form {
-	width: 32%;
+	width: 40%;
 	text-align: left;
 }
 #register-for-head {
@@ -232,7 +284,7 @@ html, body {
 	font-size: 1.1em;
 	margin-bottom: 5%;
 }
-#register-form input[type=text], #register-form input[type=email] {
+#register-form input[type=text], #register-form input[type=email], #register-form input[type=number] {
 	width: 100%;
 	padding: 5px;
 	border: none;
@@ -240,6 +292,9 @@ html, body {
 }
 #register-form label {
 	font-size: 1.2em;
+}
+.more-entries {
+	margin-bottom: 0 !important;
 }
 #register-submit {
 	margin-bottom: 5%;
@@ -255,10 +310,76 @@ html, body {
 	font-size: 1.2em;
 }
 #contact-content {
+	justify-content: center;
 	display: none;
 	opacity: 0;
 	-webkit-transition: opacity 0.5s ease-in-out;
 	-moz-transition: opacity 0.5s ease-in-out;
 	-o-transition: opacity 0.5s ease-in-out;
 	transition: opacity 0.5s ease-in-out;
+}
+@media all and (max-width: 700px) {
+	.oasis-heading {
+		font-size: 6em;
+	}
+	.oasis-logo {
+		height: 7em;
+	}
+	.oasis-slogan {
+		font-size: 3em;
+	}
+}
+@media all and (max-width: 600px) {
+	#container {
+		height: 90vh;
+		width: 85vw;
+	}
+	#content {
+		background-position: 70% 0;
+	}
+	.top-menu span {
+		font-size: 1em;
+	}
+	#nav-bottom span {
+		font-size: 1.2em;
+	}
+	.oasis-heading {
+		font-size: 5em;
+	}
+	.oasis-logo {
+		height: 7em;
+	}
+	.oasis-slogan {
+		font-size: 3em;
+	}
+	#contact-content {
+		justify-content: center;
+	}
+	#register-form {
+		width: 70%;
+	}
+	.event-body {
+		font-size: 1.2em;
+	}
+	#register-message {
+		width: 80vw;
+		font-size: 1.2em;
+		text-align: center;
+	}
+}
+@media all and (max-width: 450px) {
+	.oasis-heading {
+		font-size: 5em;
+	}
+	.oasis-logo {
+		display: none;
+	}
+	.oasis-slogan {
+		margin-top: 0;
+		padding-left: 0; 
+		font-size: 3em;
+	}
+	.event-name {
+		font-size: 3em;
+	}
 }
