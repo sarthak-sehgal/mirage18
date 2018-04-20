@@ -1,3 +1,5 @@
+document.getElementById("container").style.display = "block";
+
 var active_content = "home-content";
 var next_content;
 var transition_time = 500;
