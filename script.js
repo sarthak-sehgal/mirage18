@@ -100,20 +100,24 @@ document.getElementById("myForm").onsubmit = function registerForm(e)
 	entries = document.getElementById("register-entries").value;
 	if(name!="" && genre!="" && contact!="" && email!="" && members!="" && elemLocation!="" && entry1!="" && entry2!="")
 	{
-		URL = "abc";
+		URL = "http://192.168.1.104:8080/preregistration/";
 		$.ajax({
 			type:'POST',
+			contentType: 'application/json',
+			// headers: { 'x-my-custom-header': 'some value' },
 			url: URL,
-			data:{
+			data:JSON.stringify({
 				name: name,
 				genre: genre,
-				email: email,
-				members: members,
-				location: elemLocation,
+				phone: contact,
+				email_address: email,
+				number_of_participants: members,
+				elimination_preference: elemLocation,
 				entry1: entry1,
 				entry2: entry2,
-				entries: entries
-			},
+				enteries: entries
+			}),
+			dataType: "json",
 			complete:function(xhr,textstatus){
 				document.getElementById("register-overlay").style.display = "flex";
 				document.getElementById("register-message").style.display = "flex";
@@ -127,7 +131,7 @@ document.getElementById("myForm").onsubmit = function registerForm(e)
 		}).done(function(response){
 			document.getElementById("register-overlay").style.display = "flex";
 			document.getElementById("register-message").style.display = "flex";
-			document.getElementById("register-message-span").innerHTML = xhr.responseJSON.message;
+			document.getElementById("register-message-span").innerHTML = response.message;
 		});
 	}
 	else

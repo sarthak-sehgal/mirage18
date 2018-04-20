@@ -13,6 +13,7 @@ html, body {
 	align-items: center;
 	font-family: BebasNeue;
 	text-transform: uppercase;
+	letter-spacing: 0.1em;
 	background: url('./media/bg.jpg');
 	background-size: cover;
 	background-position: 50% 50%;
@@ -40,6 +41,7 @@ html, body {
 	display: none;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
 }
 #register-close {
 	z-index: 9999;
@@ -195,11 +197,13 @@ html, body {
 	width: 100%;
 }
 .oasis-heading {
+	text-align: center;
 	color: #fff;
 	font-size: 7em;
 	text-shadow: #000 4px 4px;
 }
 .oasis-slogan {
+	text-align: center;
 	margin-top: -3%;
     color: #fff;
     font-size: 4em;
@@ -247,7 +251,8 @@ html, body {
 	-webkit-transition: opacity 0.5s ease-in-out;
 	-moz-transition: opacity 0.5s ease-in-out;
 	-o-transition: opacity 0.5s ease-in-out;
-	transition: opacity 0.5s ease-in-out;	
+	transition: opacity 0.5s ease-in-out;
+	text-align: center;	
 }
 #register-content {
 	-webkit-transform:translate3d(0,0,0);
@@ -279,7 +284,7 @@ html, body {
 	font-size: 1.1em;
 	margin-bottom: 5%;
 }
-#register-form input[type=text], #register-form input[type=email] {
+#register-form input[type=text], #register-form input[type=email], #register-form input[type=number] {
 	width: 100%;
 	padding: 5px;
 	border: none;
@@ -359,6 +364,7 @@ html, body {
 	#register-message {
 		width: 80vw;
 		font-size: 1.2em;
+		text-align: center;
 	}
 }
 @media all and (max-width: 450px) {
