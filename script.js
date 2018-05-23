@@ -2,6 +2,7 @@ var active_content = "home-content";
 var next_content;
 var transition_time = 500;
 var isRegisterOpen = 0;
+var registerContent;
 
 for(var i=0; i<document.getElementsByClassName("event-link").length; i++)
 {
@@ -15,8 +16,12 @@ for(var i=0; i<document.getElementsByClassName("top-menu-items").length; i++)
 function openEvent() {
 	fadeOut(active_content);
 	document.getElementById("register-bottom").style.height = "10%";
-	document.getElementById("register-content").style.opacity = 0;
-
+	if(this.id!="home"&&this.id!="contact")
+	{
+		registerContent = "register-content-"+this.id;
+		console.log(registerContent);
+		document.getElementById(registerContent).style.opacity = 0;
+	}
 	next_content = this.id+"-content";
 	if(next_content == "home-content" || next_content == "contact-content")
 	{
@@ -36,7 +41,7 @@ function openEvent() {
 	}
 	id = this.id;
 	setTimeout(
-		function(){fadeIn(next_content); active_content = next_content; document.getElementById("register-content").style.display = "none";},
+		function(){fadeIn(next_content); active_content = next_content; document.getElementById(registerContent).style.display = "none";},
 		transition_time);
 }
 function fadeOut(id) {
@@ -72,10 +77,11 @@ function register(id) {
 		function(){document.getElementById(id+"-content").style.display = "none";}, 
 		transition_time);
 	document.getElementById(id+"-register").style.opacity = 0;
-	document.getElementById("register-for-head").innerHTML = "Register for " + id;
+	for(i=0;i<document.getElementsByClassName("register-for-head").length;i++)
+		document.getElementsByClassName("register-for-head")[i].innerHTML = "Register for " + id;
 	setTimeout(
 		function(){document.getElementById(id+"-register").style.display = "none"; 
-					document.getElementById("register-content").style.display = "flex";document.getElementById("register-content").style.opacity = 1;}, 
+					document.getElementById(registerContent).style.display = "flex";document.getElementById(registerContent).style.opacity = 1;}, 
 		transition_time);
 }
 
