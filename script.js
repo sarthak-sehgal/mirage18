@@ -166,7 +166,7 @@ document.getElementById("myFormRapwars").onsubmit = function registerForm(f)
 	citypref = document.getElementById("register-location-rw").value;
 	if(name!="" && rappername!="" && contact!="" && email!="" && city!="" && citypref!="")
 	{
-		URL = "https://bits-oasis.org/2018/preregistration/";
+		URL = "https://bits-oasis.org/2018/preregistration/rapwars";
 		$.ajax({
 			type:'POST',
 			contentType: 'application/json',
@@ -209,7 +209,7 @@ document.getElementById("myFormPurplepros").onsubmit = function registerForm(g)
 	city = document.getElementById("register-location-pp").value;
 	if(name!="" && contact!="" && email!="" && city!="")
 	{
-		URL = "https://bits-oasis.org/2018/preregistration/";
+		URL = "https://bits-oasis.org/2018/preregistration/poetryslam";
 		$.ajax({
 			type:'POST',
 			contentType: 'application/json',
