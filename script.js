@@ -86,24 +86,24 @@ function register(id) {
 }
 
 // Register
-document.getElementById("register-close").addEventListener("click", closeRegister);
-function closeRegister(e) {
-	document.getElementById("register-overlay").style.display = "none";
-	document.getElementById("register-message").style.display = "none";
-	e.preventDefault();
-}
+// document.getElementById("register-close").addEventListener("click", closeRegister);
+// function closeRegister(e) {
+// 	document.getElementById("register-overlay").style.display = "none";
+// 	document.getElementById("register-message").style.display = "none";
+// 	e.preventDefault();
+// }
 
-function closeRegister(f) {
-	document.getElementById("register-overlay").style.display = "none";
-	document.getElementById("register-message").style.display = "none";
-	f.preventDefault();
-}
+// function closeRegister(f) {
+// 	document.getElementById("register-overlay").style.display = "none";
+// 	document.getElementById("register-message").style.display = "none";
+// 	f.preventDefault();
+// }
 
-function closeRegister(g) {
-	document.getElementById("register-overlay").style.display = "none";
-	document.getElementById("register-message").style.display = "none";
-	g.preventDefault();
-}
+// function closeRegister(g) {
+// 	document.getElementById("register-overlay").style.display = "none";
+// 	document.getElementById("register-message").style.display = "none";
+// 	g.preventDefault();
+// }
 
 document.getElementById("myFormRocktaves").onsubmit = function registerForm(e)
 {
