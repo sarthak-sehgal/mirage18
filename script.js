@@ -93,6 +93,18 @@ function closeRegister(e) {
 	e.preventDefault();
 }
 
+function closeRegister(f) {
+	document.getElementById("register-overlay").style.display = "none";
+	document.getElementById("register-message").style.display = "none";
+	f.preventDefault();
+}
+
+function closeRegister(g) {
+	document.getElementById("register-overlay").style.display = "none";
+	document.getElementById("register-message").style.display = "none";
+	g.preventDefault();
+}
+
 document.getElementById("myFormRocktaves").onsubmit = function registerForm(e)
 {
 	name = document.getElementById("register-name").value;
