@@ -219,7 +219,7 @@ document.getElementById("myFormPurplepros").onsubmit = function registerForm(g)
 				name: name,
 				phone: contact,
 				email_address: email,
-				city: city,
+				city: city
 			}),
 			dataType: "json",
 			error:function(xhr,textstatus,err){
