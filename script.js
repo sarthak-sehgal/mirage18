@@ -152,7 +152,7 @@ document.getElementById("myFormRapwars").onsubmit = function registerForm(f)
 	email = document.getElementById("register-email").value;
 	city = document.getElementById("register-city").value;
 	citypref = document.getElementById("register-location").value;
-	if(name!="" && rappername!="" && contact!="" && email!="" && city!="")
+	if(name!="" && rappername!="" && contact!="" && email!="" && city!="" && citypref!="")
 	{
 		URL = "https://bits-oasis.org/2018/preregistration/";
 		$.ajax({
@@ -162,11 +162,11 @@ document.getElementById("myFormRapwars").onsubmit = function registerForm(f)
 			url: URL,
 			data:JSON.stringify({
 				name: name,
-				rappername: rappername,
+				rapper_name: rappername,
 				phone: contact,
 				email_address: email,
 				city: city,
-				elimination_preference: citypref
+				city_of_participation: citypref
 			}),
 			dataType: "json",
 			error:function(xhr,textstatus,err){
@@ -195,7 +195,7 @@ document.getElementById("myFormPurplepros").onsubmit = function registerForm(g)
 	contact = document.getElementById("register-contact").value;
 	email = document.getElementById("register-email").value;
 	city = document.getElementById("register-location").value;
-	if(name!="" && contact!="" && email!="" && elemLocation!="")
+	if(name!="" && contact!="" && email!="" && city!="")
 	{
 		URL = "https://bits-oasis.org/2018/preregistration/";
 		$.ajax({
@@ -207,7 +207,7 @@ document.getElementById("myFormPurplepros").onsubmit = function registerForm(g)
 				name: name,
 				phone: contact,
 				email_address: email,
-				elimination_preference: city,
+				city: city,
 			}),
 			dataType: "json",
 			error:function(xhr,textstatus,err){
