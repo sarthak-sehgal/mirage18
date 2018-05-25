@@ -107,15 +107,15 @@ function closeRegister(g) {
 
 document.getElementById("myFormRocktaves").onsubmit = function registerForm(e)
 {
-	name = document.getElementById("register-name").value;
-	genre = document.getElementById("register-genre").value;
-	contact = document.getElementById("register-contact").value;
-	email = document.getElementById("register-email").value;
-	members = document.getElementById("register-members").value;
-	elemLocation = document.getElementById("register-location").value;
-	entry1 = document.getElementById("register-entry1").value;
-	entry2 = document.getElementById("register-entry2").value;
-	entries = document.getElementById("register-entries").value;
+	name = document.getElementById("register-name-ro").value;
+	genre = document.getElementById("register-genre-ro").value;
+	contact = document.getElementById("register-contact-ro").value;
+	email = document.getElementById("register-email-ro").value;
+	members = document.getElementById("register-members-ro").value;
+	elemLocation = document.getElementById("register-location-ro").value;
+	entry1 = document.getElementById("register-entry1-ro").value;
+	entry2 = document.getElementById("register-entry2-ro").value;
+	entries = document.getElementById("register-entries-ro").value;
 	if(name!="" && genre!="" && contact!="" && email!="" && members!="" && elemLocation!="" && entry1!="" && entry2!="")
 	{
 		URL = "https://bits-oasis.org/2018/preregistration/";
@@ -158,12 +158,12 @@ document.getElementById("myFormRocktaves").onsubmit = function registerForm(e)
 
 document.getElementById("myFormRapwars").onsubmit = function registerForm(f)
 {
-	name = document.getElementById("register-name").value;
-	rappername = document.getElementById("register-rapper").value;
-	contact = document.getElementById("register-contact").value;
-	email = document.getElementById("register-email").value;
-	city = document.getElementById("register-city").value;
-	citypref = document.getElementById("register-location").value;
+	name = document.getElementById("register-name-rw").value;
+	rappername = document.getElementById("register-rapper-rw").value;
+	contact = document.getElementById("register-contact-rw").value;
+	email = document.getElementById("register-email-rw").value;
+	city = document.getElementById("register-city-rw").value;
+	citypref = document.getElementById("register-location-rw").value;
 	if(name!="" && rappername!="" && contact!="" && email!="" && city!="" && citypref!="")
 	{
 		URL = "https://bits-oasis.org/2018/preregistration/";
@@ -203,10 +203,10 @@ document.getElementById("myFormRapwars").onsubmit = function registerForm(f)
 
 document.getElementById("myFormPurplepros").onsubmit = function registerForm(g)
 {
-	name = document.getElementById("register-name").value;
-	contact = document.getElementById("register-contact").value;
-	email = document.getElementById("register-email").value;
-	city = document.getElementById("register-location").value;
+	name = document.getElementById("register-name-pp").value;
+	contact = document.getElementById("register-contact-pp").value;
+	email = document.getElementById("register-email-pp").value;
+	city = document.getElementById("register-location-pp").value;
 	if(name!="" && contact!="" && email!="" && city!="")
 	{
 		URL = "https://bits-oasis.org/2018/preregistration/";
