@@ -2,6 +2,10 @@
 	font-family: BebasNeue;
 	src: url(./fonts/BebasNeue-Regular.ttf);
 }
+@font-face {
+	font-family: Gotham;
+	src: url(./fonts/Gotham-Regular.otf);
+}
 html, body {
 	height: 100vh;
 	width: 100vw;
@@ -180,7 +184,7 @@ html, body {
 	transition: opacity 0.5s ease-in-out;
 }
 #rocktaves-content {
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	-webkit-transition: opacity 0.5s ease-in-out;
 	-moz-transition: opacity 0.5s ease-in-out;
 	-o-transition: opacity 0.5s ease-in-out;
@@ -189,7 +193,7 @@ html, body {
 	opacity: 0;
 }
 #rapwars-content {
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	-webkit-transition: opacity 0.5s ease-in-out;
 	-moz-transition: opacity 0.5s ease-in-out;
 	-o-transition: opacity 0.5s ease-in-out;
@@ -198,7 +202,7 @@ html, body {
 	opacity: 0;
 }
 #purplepros-content {
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	-webkit-transition: opacity 0.5s ease-in-out;
 	-moz-transition: opacity 0.5s ease-in-out;
 	-o-transition: opacity 0.5s ease-in-out;
@@ -248,9 +252,10 @@ html, body {
 }
 .event-body {
 	width: 80%;
-	font-size: 1.4em;
+	font-size: 1.2em;
 	text-align: center;
 	letter-spacing: 0.7px;
+	font-family: Gotham;
 }
 .event-name, .event-body {
 	z-index: 10;
@@ -359,7 +364,7 @@ html, body {
 		font-size: 1em;
 	}
 	#nav-bottom span {
-		font-size: 1.2em;
+		font-size: 1em;
 	}
 	.oasis-heading {
 		font-size: 5em;
@@ -377,7 +382,7 @@ html, body {
 		width: 70%;
 	}
 	.event-body {
-		font-size: 1.2em;
+		font-size: .9em;
 	}
 	#register-message {
 		width: 80vw;
@@ -399,5 +404,6 @@ html, body {
 	}
 	.event-name {
 		font-size: 3em;
+		text-align: center;
 	}
 }

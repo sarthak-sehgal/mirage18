@@ -93,7 +93,7 @@ function closeRegister(e) {
 	e.preventDefault();
 }
 
-document.getElementById("myForm").onsubmit = function registerForm(e)
+document.getElementById("myFormRocktaves").onsubmit = function registerForm(e)
 {
 	name = document.getElementById("register-name").value;
 	genre = document.getElementById("register-genre").value;
@@ -142,4 +142,90 @@ document.getElementById("myForm").onsubmit = function registerForm(e)
 		document.getElementById("register-message").style.display = "flex";		
 	}
 	e.preventDefault();
+}
+
+document.getElementById("myFormRapwars").onsubmit = function registerForm(f)
+{
+	name = document.getElementById("register-name").value;
+	rappername = document.getElementById("register-rapper").value;
+	contact = document.getElementById("register-contact").value;
+	email = document.getElementById("register-email").value;
+	city = document.getElementById("register-city").value;
+	citypref = document.getElementById("register-location").value;
+	if(name!="" && rappername!="" && contact!="" && email!="" && city!="")
+	{
+		URL = "https://bits-oasis.org/2018/preregistration/";
+		$.ajax({
+			type:'POST',
+			contentType: 'application/json',
+			// headers: { 'x-my-custom-header': 'some value' },
+			url: URL,
+			data:JSON.stringify({
+				name: name,
+				rappername: rappername,
+				phone: contact,
+				email_address: email,
+				city: city,
+				elimination_preference: citypref
+			}),
+			dataType: "json",
+			error:function(xhr,textstatus,err){
+				document.getElementById("register-overlay").style.display = "flex";
+				document.getElementById("register-message").style.display = "flex";
+				document.getElementById("register-message-span").innerHTML = "ERROR! Please try again.";
+			}
+		}).done(function(response){
+			document.getElementById("register-overlay").style.display = "flex";
+			document.getElementById("register-message").style.display = "flex";
+			document.getElementById("register-message-span").innerHTML = response.message;
+		});
+	}
+	else
+	{
+		document.getElementById("register-overlay").style.display = "flex";
+		document.getElementById("register-message-span").innerHTML = "Please fill all the required fields.";
+		document.getElementById("register-message").style.display = "flex";		
+	}
+	f.preventDefault();
+}
+
+document.getElementById("myFormPurplepros").onsubmit = function registerForm(g)
+{
+	name = document.getElementById("register-name").value;
+	contact = document.getElementById("register-contact").value;
+	email = document.getElementById("register-email").value;
+	city = document.getElementById("register-location").value;
+	if(name!="" && contact!="" && email!="" && elemLocation!="")
+	{
+		URL = "https://bits-oasis.org/2018/preregistration/";
+		$.ajax({
+			type:'POST',
+			contentType: 'application/json',
+			// headers: { 'x-my-custom-header': 'some value' },
+			url: URL,
+			data:JSON.stringify({
+				name: name,
+				phone: contact,
+				email_address: email,
+				elimination_preference: city,
+			}),
+			dataType: "json",
+			error:function(xhr,textstatus,err){
+				document.getElementById("register-overlay").style.display = "flex";
+				document.getElementById("register-message").style.display = "flex";
+				document.getElementById("register-message-span").innerHTML = "ERROR! Please try again.";
+			}
+		}).done(function(response){
+			document.getElementById("register-overlay").style.display = "flex";
+			document.getElementById("register-message").style.display = "flex";
+			document.getElementById("register-message-span").innerHTML = response.message;
+		});
+	}
+	else
+	{
+		document.getElementById("register-overlay").style.display = "flex";
+		document.getElementById("register-message-span").innerHTML = "Please fill all the required fields.";
+		document.getElementById("register-message").style.display = "flex";		
+	}
+	g.preventDefault();
 }
