@@ -201,13 +201,16 @@ document.getElementById("myFormRapwars").onsubmit = function registerForm(f)
 	f.preventDefault();
 }
 
-document.getElementById("myFormPurplepros").onsubmit = function registerForm(g)
+document.getElementById("myFormPurpleprose").onsubmit = function registerForm(g)
 {
 	name = document.getElementById("register-name-pp").value;
+	college = document.getElementById("register-college-pp").value;
+	year = document.getElementById("register-year-pp").value;
 	contact = document.getElementById("register-contact-pp").value;
 	email = document.getElementById("register-email-pp").value;
+	poetry = document.getElementById("register-poetry-pp").value;
 	city = document.getElementById("register-location-pp").value;
-	if(name!="" && contact!="" && email!="" && city!="")
+	if(name!="" && college!="" && year!="" && contact!="" && email!="" && city!="" && poetry!="")
 	{
 		URL = "https://bits-oasis.org/2018/preregistration/poetryslam/";
 		$.ajax({
@@ -217,9 +220,12 @@ document.getElementById("myFormPurplepros").onsubmit = function registerForm(g)
 			url: URL,
 			data:JSON.stringify({
 				name: name,
+				college: college,
+				year_and_stream_of_study: year,
 				phone: contact,
 				email_address: email,
-				city: city
+				poetry: poetry,
+				city_of_participation: city,
 			}),
 			dataType: "json",
 			error:function(xhr,textstatus,err){
