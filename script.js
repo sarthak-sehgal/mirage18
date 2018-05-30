@@ -57,7 +57,14 @@ function fadeIn(id) {
 		100);
 }
 function fadeInRegister(id) {
-	document.getElementById("register-bottom").innerHTML = '<span id="'+id+'-register" class="register-for">Register for '+id+'</span>';
+	if (id == "standup") {
+		document.getElementById("register-bottom").innerHTML = '<span id="'+id+'-register" class="register-for">Register for '+ 'Standup Soapbox' +'</span>';
+	}else if (id == "purpleprose") {
+		document.getElementById("register-bottom").innerHTML = '<span id="'+id+'-register" class="register-for">Register for '+ 'purple prose' +'</span>';
+	}
+	 else {
+		document.getElementById("register-bottom").innerHTML = '<span id="'+id+'-register" class="register-for">Register for '+id+'</span>';
+	}
 	document.getElementById("register-bottom").style.display = "flex";
 	setTimeout(
 		function(){document.getElementById("register-bottom").style.opacity = 1; document.getElementById(id+"-register").addEventListener("click", function() {register(id);})}, 
@@ -78,7 +85,16 @@ function register(id) {
 		transition_time);
 	document.getElementById(id+"-register").style.opacity = 0;
 	for(i=0;i<document.getElementsByClassName("register-for-head").length;i++)
-		document.getElementsByClassName("register-for-head")[i].innerHTML = "Register for " + id;
+	{
+		if(id == "standup"){
+			document.getElementsByClassName("register-for-head")[i].innerHTML = "Register for " + "Standup Soapbox";
+		}else if(id == "purpleprose"){
+			document.getElementsByClassName("register-for-head")[i].innerHTML = "Register for " + "purple prose";
+		}
+		else{
+			document.getElementsByClassName("register-for-head")[i].innerHTML = "Register for " + id;
+		}	
+	}
 	setTimeout(
 		function(){document.getElementById(id+"-register").style.display = "none"; 
 					document.getElementById(registerContent).style.display = "flex";document.getElementById(registerContent).style.opacity = 1;}, 
@@ -100,6 +116,12 @@ function closeRegister(f) {
 }
 
 function closeRegister(g) {
+	document.getElementById("register-overlay").style.display = "none";
+	document.getElementById("register-message").style.display = "none";
+	g.preventDefault();
+}
+
+function closeRegister(h) {
 	document.getElementById("register-overlay").style.display = "none";
 	document.getElementById("register-message").style.display = "none";
 	g.preventDefault();
@@ -246,4 +268,46 @@ document.getElementById("myFormPurpleprose").onsubmit = function registerForm(g)
 		document.getElementById("register-message").style.display = "flex";		
 	}
 	g.preventDefault();
+}
+document.getElementById("myFormStandup").onsubmit = function registerForm(h)
+{
+	name = document.getElementById("register-name-ss").value;
+	contact = document.getElementById("register-contact-ss").value;
+	email = document.getElementById("register-email-ss").value;
+	months = document.getElementById("register-months-ss").value;
+	previous_competition = document.getElementById("register-pre-comp-ss").value;
+	if(name!="" && contact!="" && email!="" && months!="" && previous_competition!="")
+	{
+		URL = "https://bits-oasis.org/2018/preregistration/poetryslam/";
+		$.ajax({
+			type:'POST',
+			contentType: 'application/json',
+			// headers: { 'x-my-custom-header': 'some value' },
+			url: URL,
+			data:JSON.stringify({
+				name: name,
+				phone: contact,
+				email_address: email,
+				time_doing_standup: months,
+				previous_competition: previous_competition, 
+			}),
+			dataType: "json",
+			error:function(xhr,textstatus,err){
+				document.getElementById("register-overlay").style.display = "flex";
+				document.getElementById("register-message").style.display = "flex";
+				document.getElementById("register-message-span").innerHTML = "ERROR! Please try again.";
+			}
+		}).done(function(response){
+			document.getElementById("register-overlay").style.display = "flex";
+			document.getElementById("register-message").style.display = "flex";
+			document.getElementById("register-message-span").innerHTML = response.message;
+		});
+	}
+	else
+	{
+		document.getElementById("register-overlay").style.display = "flex";
+		document.getElementById("register-message-span").innerHTML = "Please fill all the required fields.";
+		document.getElementById("register-message").style.display = "flex";		
+	}
+	h.preventDefault();
 }
