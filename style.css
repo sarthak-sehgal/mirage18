@@ -249,6 +249,7 @@ html, body {
 	color: #fff;
 	font-size: 5.5em;
 	text-shadow: #000 4px 4px;
+	text-align: center;
 }
 .event-body {
 	width: 80%;
