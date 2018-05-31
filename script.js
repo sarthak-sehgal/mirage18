@@ -276,7 +276,8 @@ document.getElementById("myFormStandup").onsubmit = function registerForm(h)
 	email = document.getElementById("register-email-ss").value;
 	months = document.getElementById("register-months-ss").value;
 	previous_competition = document.getElementById("register-pre-comp-ss").value;
-	if(name!="" && contact!="" && email!="" && months!="" && previous_competition!="")
+	city = document.getElementById("register-location-ss").value;
+	if(name!="" && contact!="" && email!="" && months!="" && previous_competition!="" && city!="")
 	{
 		URL = "https://bits-oasis.org/2018/preregistration/soapbox/";
 		$.ajax({
@@ -289,7 +290,8 @@ document.getElementById("myFormStandup").onsubmit = function registerForm(h)
 				phone: contact,
 				email_address: email,
 				time_doing_standup: months,
-				previous_competition: previous_competition, 
+				previous_competition: previous_competition,
+				city_of_participation: city, 
 			}),
 			dataType: "json",
 			error:function(xhr,textstatus,err){
