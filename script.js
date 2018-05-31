@@ -278,7 +278,7 @@ document.getElementById("myFormStandup").onsubmit = function registerForm(h)
 	previous_competition = document.getElementById("register-pre-comp-ss").value;
 	if(name!="" && contact!="" && email!="" && months!="" && previous_competition!="")
 	{
-		URL = "https://bits-oasis.org/2018/preregistration/poetryslam/";
+		URL = "https://bits-oasis.org/2018/preregistration/soapbox/";
 		$.ajax({
 			type:'POST',
 			contentType: 'application/json',
