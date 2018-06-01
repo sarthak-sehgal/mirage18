@@ -303,6 +303,8 @@ html, body {
 }
 .register-for-head {
 	margin-top: 5%;
+	text-align: center;
+	justify-content: center;
 }
 #register-form input {
 	font-family: BebasNeue;
