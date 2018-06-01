@@ -7,7 +7,8 @@
 	src: url(./fonts/Gotham-Regular.otf);
 }
 @font-face{
-	font-family: 'Lato', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
+
 }
 html, body {
 	height: 100vh;
@@ -253,13 +254,15 @@ html, body {
 	font-size: 5.5em;
 	text-shadow: #000 4px 4px;
 	text-align: center;
+	flex-grow: .34;
 }
 .event-body {
 	width: 80%;
 	font-size: 1.2em;
 	text-align: center;
 	letter-spacing: 0.7px;
-	font-family: 'Lato';
+	text-transform: none;
+	font-family: 'Roboto Condensed';
 }
 .event-name, .event-body {
 	z-index: 10;
