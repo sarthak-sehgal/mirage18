@@ -297,7 +297,8 @@ document.getElementById("myFormStandup").onsubmit = function registerForm(h)
 			error:function(xhr,textstatus,err){
 				document.getElementById("register-overlay").style.display = "flex";
 				document.getElementById("register-message").style.display = "flex";
-				document.getElementById("register-message-span").innerHTML = "ERROR! Please try again.";
+        document.getElementById("register-message-span").innerHTML = "ERROR! Please try again.";
+        console.log(err);
 			}
 		}).done(function(response){
 			document.getElementById("register-overlay").style.display = "flex";
