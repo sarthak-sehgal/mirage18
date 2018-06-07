@@ -124,7 +124,7 @@ function closeRegister(g) {
 function closeRegister(h) {
 	document.getElementById("register-overlay").style.display = "none";
 	document.getElementById("register-message").style.display = "none";
-	g.preventDefault();
+	h.preventDefault();
 }
 
 document.getElementById("myFormRocktaves").onsubmit = function registerForm(e)
