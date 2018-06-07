@@ -234,7 +234,7 @@ document.getElementById("myFormPurpleprose").onsubmit = function registerForm(g)
 	city = document.getElementById("register-location-pp").value;
 	if(name!="" && college!="" && year!="" && contact!="" && email!="" && city!="" && poetry!="")
 	{
-		URL = "https://bits-oasis.org/2018/preregistration/poetryslam/";
+		URL = "https://bits-oasis.org/2018/preregistration/purpleprose/";
 		$.ajax({
 			type:'POST',
 			contentType: 'application/json',
