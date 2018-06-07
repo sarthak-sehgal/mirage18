@@ -246,7 +246,7 @@ document.getElementById("myFormPurpleprose").onsubmit = function registerForm(g)
 				year_and_stream_of_study: year,
 				phone: contact,
 				email_address: email,
-				poetry: poetry,
+				entry: poetry,
 				city_of_participation: city,
 			}),
 			dataType: "json",

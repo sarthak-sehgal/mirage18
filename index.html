@@ -90,17 +90,19 @@
 					<div class="event-name" style="flex-grow: 0;">Contact</div>
 				<div class="event-body">
 					Pankaj (rocktaves): +91 7689078289<br>
+					Sachin (purple prose): +91 7891805969<br>
+					Sachin (standup soapbox): +91 7891805969<br>
 				</div>
 			</div>
 			<div id="register-content-rocktaves">
 				<h1 class="register-for-head"></h1>
 				<div id="register-form">
 					<form id="myFormRocktaves">
-						<input type="text" name="" placeholder="Name of band" id="register-name-ro" /><br>
-						<input type="text" name="" placeholder="Genre" id="register-genre-ro" /><br>
-						<input type="number" name="" placeholder="Contact number" id="register-contact-ro" /><br>
-						<input type="email" name="" placeholder="E-mail id" id="register-email-ro"><br>
-						<input type="number" name="" placeholder="No. of band members" id="register-members-ro" min="1"><br>
+						<input type="text" name="name" placeholder="Name of band" id="register-name-ro" /><br>
+						<input type="text" name="genre" placeholder="Genre" id="register-genre-ro" /><br>
+						<input type="number" name="contact" placeholder="Contact number" id="register-contact-ro" /><br>
+						<input type="email" name="email" placeholder="E-mail id" id="register-email-ro"><br>
+						<input type="number" name="members" placeholder="No. of band members" id="register-members-ro" min="1"><br>
 						<label>Elimination round location:</label><br>
 						<select id="register-location-ro">
 							<option value="bangalore">Bangalore</option>
@@ -110,15 +112,13 @@
 							<option value="kathmandu">Kathmandu</option>
 							<option value="kochi">Kochi</option>
 							<option value="kolkata">Kolkata</option>
-              <option value="mumbai">Mumbai</option>
-              <option value="other">Other</option>
+							<option value="mumbai">Mumbai</option>
 						</select><br><br>
 							<label>Entries:*</label><br>
-						<input type="text" name="" placeholder="Entry 1" id="register-entry1-ro"><br>
-						<input type="text" name="" placeholder="Entry 2" / id="register-entry2-ro"><br>
-						<input type="text" name="" placeholder="More entries" class="more-entries" id="register-entries-ro"/>
-						<p style="letter-spacing: 0.5px;">Deadline for registering through online entries for Guwahati, Kathmandu, Kolkata, Chennai, Kochi is 11<sup>th</sup> August. Shortlisting for Delhi, Mumbai and Bangalore will go as planned earlier through elimination rounds which would be held in respective cities, deadline for registration for which is 11th June.<br>
-            **PLEASE PROVIDE YOUTUBE/ SOUNDCLOUD/ BANDCAMP/ GOOGLE DRIVE/ DROPBOX LINKS TO ATLEAST TWO ORIGINAL ENTRIES AND ATLEAST ONE LINK TO LIVE PERFORMANCE. IN CASE OF AUDIO/ VIDEO RECORDINGS, KINDLY MAIL THE SAME TO <i>ARBITS@BITS-OASIS.ORG</i></p>
+						<input type="text" name="entry1" placeholder="Entry 1" id="register-entry1-ro"><br>
+						<input type="text" name="entry2" placeholder="Entry 2" / id="register-entry2-ro"><br>
+						<input type="text" name="entries" placeholder="More entries" class="more-entries" id="register-entries-ro"/>
+						<p style="letter-spacing: 0.5px;">*Please provide YouTube/ Soundcloud/ Bandcamp/ Google Drive/ Dropbox links to atleast two ORIGINAL entries and links to live performances (if any). In case of audio/ video recordings, kindly mail the same to <i>arbits@bits-oasis.org</i> &nbsp;before 11:59 pm, 11<sup>th</sup> June 2018.</p>
 						<center><button type="submit" id="register-submit">Submit</button></center>
 					</form>
 				</div>
@@ -127,11 +127,11 @@
 				<h1 class="register-for-head"></h1>
 				<div id="register-form">
 					<form id="myFormRapwars">
-						<input type="text" name="" placeholder="Name" id="register-name-rw" /><br>
-						<input type="text" name="" placeholder="Rapper name" id="register-rapper-rw" /><br>
-						<input type="number" name="" placeholder="Contact number" id="register-contact-rw" /><br>
-						<input type="email" name="" placeholder="E-mail id" id="register-email-rw"><br>
-						<input type="text" name="" placeholder="City" id="register-city-rw"><br>
+						<input type="text" name="name" placeholder="Name" id="register-name-rw" /><br>
+						<input type="text" name="rappername" placeholder="Rapper name" id="register-rapper-rw" /><br>
+						<input type="number" name="contact" placeholder="Contact number" id="register-contact-rw" /><br>
+						<input type="email" name="email" placeholder="E-mail id" id="register-email-rw"><br>
+						<input type="text" name="city" placeholder="City" id="register-city-rw"><br>
 						<label>City of Participation:</label><br>
 						<select id="register-location-rw">
 							<option value="delhi">Delhi</option>
@@ -146,12 +146,12 @@
 				<h1 class="register-for-head" style="margin-top: 10vh;"></h1>
 				<div id="register-form">
 					<form id="myFormPurpleprose">
-						<input type="text" name="" placeholder="Name" id="register-name-pp" /><br>
-						<input type="text" name="" placeholder="College Name" id="register-college-pp" /><br>
-						<input type="text" name="" placeholder="Year and Stream of Study" id="register-year-pp" /><br>
-						<input type="number" name="" placeholder="Contact number" id="register-contact-pp" /><br>
-						<input type="email" name="" placeholder="E-mail id" id="register-email-pp"><br>
-						<input type="text" name="" placeholder="Any previous link to poetry" id="register-poetry-pp">
+						<input type="text" name="name" placeholder="Name" id="register-name-pp" /><br>
+						<input type="text" name="college" placeholder="College Name" id="register-college-pp" /><br>
+						<input type="text" name="year" placeholder="Year and Stream of Study" id="register-year-pp" /><br>
+						<input type="number" name="contact" placeholder="Contact number" id="register-contact-pp" /><br>
+						<input type="email" name="email" placeholder="E-mail id" id="register-email-pp"><br>
+						<input type="text" name="poetry" placeholder="Any previous link to poetry" id="register-poetry-pp">
 						<label>City of Participation:</label><br>
 						<select id="register-location-pp">
 							<option value="delhi">Delhi</option>
@@ -167,11 +167,11 @@
 				<h1 class="register-for-head"></h1>
 				<div id="register-form">
 					<form id="myFormStandup">
-						<input type="text" name="" placeholder="Name" id="register-name-ss" /><br>
-						<input type="number" name="" placeholder="Contact number" id="register-contact-ss" /><br>
-						<input type="email" name="" placeholder="E-mail id" id="register-email-ss"><br>
-						<input type="text" name="" placeholder="Doing standup from last (in months)" id="register-months-ss">
-						<input type="text" name="" placeholder="Details of any competition won before" id="register-pre-comp-ss">
+						<input type="text" name="name" placeholder="Name" id="register-name-ss" /><br>
+						<input type="number" name="contact" placeholder="Contact number" id="register-contact-ss" /><br>
+						<input type="email" name="email" placeholder="E-mail id" id="register-email-ss"><br>
+						<input type="text" name="months" placeholder="Doing standup from last (in months)" id="register-months-ss">
+						<input type="text" name="previous_competition" placeholder="Details of any competition won before" id="register-pre-comp-ss">
 						<label>City of Participation:</label><br>
 						<select id="register-location-ss">
 							<option value="Bengaluru - 28 June">Bengaluru - 28 June</option>
