@@ -200,7 +200,13 @@
 			<div id="register-close"><img src="./media/close.png"></div>
 			<span id="register-message-span"></span>
 	</div>
-	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+  <script>
+    var script = document.createElement('script');
+    script.setAttribute('src', 'script.js?v=' + new Date().getTime());
+    script.setAttribute('type', 'text/javascript');
+    document.body.appendChild(script);
+  </script>
+	
 </body>
 </html>
