@@ -58,7 +58,7 @@ function fadeIn(id) {
 }
 function fadeInRegister(id) {
 	if (id == "standup") {
-		document.getElementById("register-bottom").innerHTML = '<span id="'+id+'-register" class="register-for">Register for '+ 'Standup Soapbox' +'</span>';
+    document.getElementById("register-bottom").innerHTML = '<span id="'+id+'-register" class="register-for">Register for '+ 'Standup Soapbox' +'</span>';
 	}else if (id == "purpleprose") {
 		document.getElementById("register-bottom").innerHTML = '<span id="'+id+'-register" class="register-for">Register for '+ 'purple prose' +'</span>';
 	}
@@ -67,7 +67,12 @@ function fadeInRegister(id) {
 	}
 	document.getElementById("register-bottom").style.display = "flex";
 	setTimeout(
-		function(){document.getElementById("register-bottom").style.opacity = 1; document.getElementById(id+"-register").addEventListener("click", function() {register(id);})}, 
+		function(){
+      document.getElementById("register-bottom").style.opacity = 1;
+      if (!document.getElementById(id+"-register").classList.contains("reg-closed")) {
+        document.getElementById(id+"-register").addEventListener("click", function() {register(id);});
+      }
+  }, 
 		100);
 }
 function fadeOutRegister() {
