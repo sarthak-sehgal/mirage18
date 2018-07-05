@@ -166,7 +166,7 @@ document.getElementById("myFormRocktaves").onsubmit = function registerForm(e)
 			error:function(xhr,textstatus,err){
 				document.getElementById("register-overlay").style.display = "flex";
 				document.getElementById("register-message").style.display = "flex";
-				document.getElementById("register-message-span").innerHTML = "ERROR! Please try again.";
+				document.getElementById("register-message-span").innerHTML = "ERROR! Please try again.<br>Try registering in <i>incognito mode</i>.<br>If the problem persists, please try registering through a different browser or device.";
 			}
 		}).done(function(response){
 			document.getElementById("register-overlay").style.display = "flex";
@@ -211,7 +211,7 @@ document.getElementById("myFormRapwars").onsubmit = function registerForm(f)
 			error:function(xhr,textstatus,err){
 				document.getElementById("register-overlay").style.display = "flex";
 				document.getElementById("register-message").style.display = "flex";
-				document.getElementById("register-message-span").innerHTML = "ERROR! Please try again.";
+				document.getElementById("register-message-span").innerHTML = "ERROR! Please try again.<br>Try registering in <i>incognito mode</i>.<br>If the problem persists, please try registering through a different browser or device.";
 			}
 		}).done(function(response){
 			document.getElementById("register-overlay").style.display = "flex";
@@ -258,7 +258,7 @@ document.getElementById("myFormPurpleprose").onsubmit = function registerForm(g)
 			error:function(xhr,textstatus,err){
 				document.getElementById("register-overlay").style.display = "flex";
 				document.getElementById("register-message").style.display = "flex";
-				document.getElementById("register-message-span").innerHTML = "ERROR! Please try again.";
+				document.getElementById("register-message-span").innerHTML = "ERROR! Please try again.<br>Try registering in <i>incognito mode</i>.<br>If the problem persists, please try registering through a different browser or device.";
 			}
 		}).done(function(response){
 			document.getElementById("register-overlay").style.display = "flex";
@@ -302,7 +302,7 @@ document.getElementById("myFormStandup").onsubmit = function registerForm(h)
 			error:function(xhr,textstatus,err){
 				document.getElementById("register-overlay").style.display = "flex";
 				document.getElementById("register-message").style.display = "flex";
-        document.getElementById("register-message-span").innerHTML = "ERROR! Please try again.";
+        document.getElementById("register-message-span").innerHTML = "ERROR! Please try again.<br>Try registering in <i>incognito mode</i>.<br>If the problem persists, please try registering through a different browser or device.";
         console.log(err);
 			}
 		}).done(function(response){
