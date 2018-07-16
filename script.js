@@ -60,8 +60,10 @@ function openEvent() {
 	}
 	else
 	{
-		fadeOut("nav-bottom");
-		setTimeout(function(){fadeInRegister(id);}, transition_time);
+		if(id !== 'standup') {
+			fadeOut("nav-bottom");
+			setTimeout(function(){fadeInRegister(id);}, transition_time);
+		}
 	}
 	id = this.id;
 	setTimeout(
@@ -82,7 +84,7 @@ function fadeIn(id) {
 }
 function fadeInRegister(id) {
 	if (id == "standup") {
-    document.getElementById("register-bottom").innerHTML = '<span id="'+id+'-register" class="register-for">Register for '+ 'Standup Soapbox' +'</span>';
+    		document.getElementById("register-bottom").innerHTML = '<span id="'+id+'-register" class="register-for">Register for '+ 'Standup Soapbox' +'</span>';
 	}else if (id == "purpleprose") {
 		document.getElementById("register-bottom").innerHTML = '<span id="'+id+'-register" class="register-for">Register for '+ 'purple prose' +'</span>';
 	}
@@ -116,7 +118,7 @@ function register(id) {
 	for(i=0;i<document.getElementsByClassName("register-for-head").length;i++)
 	{
 		if(id == "standup"){
-			document.getElementsByClassName("register-for-head")[i].innerHTML = "Register for " + "Standup Soapbox";
+			document.getElementsByClassName("register-for-head")[i].innerHTML = "Registrations closed for standup soapbox";
 		}else if(id == "purpleprose"){
 			document.getElementsByClassName("register-for-head")[i].innerHTML = "Register for " + "purple prose";
 		}
