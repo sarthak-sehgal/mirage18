@@ -84,10 +84,10 @@ function fadeInRegister(id) {
 	if (id == "standup") {
     		document.getElementById("register-bottom").innerHTML = '<span id="" style="cursor: default" class="register-for">Registrations closed for standup soapbox</span>';
 	}else if (id == "purpleprose") {
-		document.getElementById("register-bottom").innerHTML = '<span id="'+id+'-register" class="register-for">Register for '+ 'purple prose' +'</span>';
+		document.getElementById("register-bottom").innerHTML = '<span id="" style="cursor: default" class="register-for">Registrations closed for purple prose</span>';
 	}
 	 else {
-		document.getElementById("register-bottom").innerHTML = '<span id="'+id+'-register" class="register-for">Register for '+id+'</span>';
+		document.getElementById("register-bottom").innerHTML = '<span id="" style="cursor: default" class="register-for">Registrations closed for ' + id + '</span>';
 	}
 	document.getElementById("register-bottom").style.display = "flex";
 	setTimeout(
